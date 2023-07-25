@@ -1,0 +1,1165 @@
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+a{
+  text-decoration: none;
+}
+.b-example-divider {
+  width: 100%;
+  height: 4rem;
+  background-color: rgba(0, 0, 0, .1);
+  border: solid rgba(0, 0, 0, .15);
+  border-width: 1px 0;
+  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
+.b-example-vr {
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 100vh;
+}
+
+.bi {
+  vertical-align: -.125em;
+  fill: currentColor;
+}
+
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  text-align: center;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.btn-bd-primary {
+  --bd-violet-bg: #712cf9;
+  --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+  --bs-btn-font-weight: 600;
+  --bs-btn-color: var(--bs-white);
+  --bs-btn-bg: var(--bd-violet-bg);
+  --bs-btn-border-color: var(--bd-violet-bg);
+  --bs-btn-hover-color: var(--bs-white);
+  --bs-btn-hover-bg: #6528e0;
+  --bs-btn-hover-border-color: #6528e0;
+  --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+  --bs-btn-active-color: var(--bs-btn-hover-color);
+  --bs-btn-active-bg: #5a23c8;
+  --bs-btn-active-border-color: #5a23c8;
+}
+.bd-mode-toggle {
+  z-index: 1500;
+}
+.malf{
+  text-decoration: none;
+  color: white;
+}
+
+.img{
+  max-width: 40px;
+}
+
+
+
+/*
+  Avec la section, nous voulons prendre toute la place 
+  du « viewport » et mettre un arrière-plan en couleur 
+  transparente pour donner l’impression
+  d’un « pop-up » par-dessus la page.
+*/
+
+/*
+  Le div directement sous la section nous permet 
+  de créer une boite avec une couleur d’arrière-plan
+  et une bordure.
+*/
+section.login-container > div{
+    width: 450px;
+  
+    margin: auto;
+  
+    padding: 20px;
+
+    text-align: center;
+
+    background: #eee;
+    border: 1px solid #ccc;
+
+    border-radius: 5px;
+
+}
+
+/*
+    Nous plaçons les éléments à l’intérieur du formulaire
+    en « flexbox » sur une seule colonne.
+*/
+section.login-container form{
+    display: flex;
+    flex-direction: column;
+}
+
+/*
+  Nous voulons que les champs du formulaire prennent 
+  toute la largeur.
+  Le outline: 0; empêche d’avoir un surlignement de
+  l’objet au focus.
+  C’est moins bon au point de vue de l’accessibilité, 
+  mais plus joli du point vu du design.
+*/
+form input[type="password"], 
+form input[type="text"], 
+form button[type="submit"] {
+    width: 100%;
+  
+    margin-bottom: 32px;
+    padding: 16px;
+  
+    color: #333;
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    outline: 0;
+}
+
+/*
+    Au survol et au focus des champs de saisie de texte,
+    nous changeons la couleur d’arrière-plan.
+*/
+form input[type="text"]:focus,
+form input[type="text"]:hover,
+form input[type="password"]:focus,
+form input[type="password"]:hover {
+    background-color: #ccc;
+}
+
+
+/*
+    Mises-en forme du bouton pour l’envoi du formulaire au survol et au focus.
+*/
+
+
+
+
+
+
+/****************************************************/
+
+
+
+
+
+
+
+/* Styles de base pour la page Web
+   Ne pas touchez */
+
+
+/*------------------
+   Reset
+------------------*/
+
+html{
+    box-sizing: border-box;
+}
+
+*,*:before,*:after{
+    box-sizing: inherit;
+}
+
+/*------------------
+   Base
+------------------*/
+
+body{
+    background-color: white;
+    font-family: Helvetica, sans-serif;
+}
+
+
+/*------------------
+   Mise en page
+------------------*/
+
+.wrapper{
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* @import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+
+body{
+  font-family: 'Barlow', sans-serif;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+.border-left{
+  border-left: 2px solid var(--primary) !important;
+}
+
+
+.sidebar{
+  top: 0;
+  left : 0;
+  z-index : 100;
+  overflow-y: auto;
+}
+
+.overlay{
+  background-color: rgb(0 0 0 / 45%);
+  z-index: 99;
+}
+
+/* sidebar for small screens */
+@media screen and (max-width: 767px){
+  
+    .sidebar{
+      max-width: 18rem;
+      transform : translateX(-100%);
+      transition : transform 0.4s ease-out;
+    }
+    
+    .sidebar.active{
+      transform : translateX(0);
+    }
+    
+  }
+  .abc{
+    text-decoration: none;
+  }
+  
+.img{
+  max-width: 40px;
+}
+
+
+
+/*
+  Avec la section, nous voulons prendre toute la place 
+  du « viewport » et mettre un arrière-plan en couleur 
+  transparente pour donner l’impression
+  d’un « pop-up » par-dessus la page.
+*/
+section.login-container{
+    display: flex;
+    position: fixed;
+    top:0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  
+}
+
+/*
+  Le div directement sous la section nous permet 
+  de créer une boite avec une couleur d’arrière-plan
+  et une bordure.
+*/
+section.login-container > div{
+    width: 450px;
+  
+    margin: auto;
+  
+    padding: 20px;
+
+    text-align: center;
+
+    background: #eee;
+    border: 1px solid #ccc;
+
+    border-radius: 5px;
+
+}
+
+/*
+    Nous plaçons les éléments à l’intérieur du formulaire
+    en « flexbox » sur une seule colonne.
+*/
+section.login-container form{
+    display: flex;
+    flex-direction: column;
+}
+
+/*
+  Nous voulons que les champs du formulaire prennent 
+  toute la largeur.
+  Le outline: 0; empêche d’avoir un surlignement de
+  l’objet au focus.
+  C’est moins bon au point de vue de l’accessibilité, 
+  mais plus joli du point vu du design.
+*/
+form input[type="password"], 
+form input[type="text"], 
+form button[type="submit"] {
+    width: 100%;
+  
+    margin-bottom: 32px;
+    padding: 16px;
+  
+    color: #333;
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    outline: 0;
+}
+
+/*
+    Au survol et au focus des champs de saisie de texte,
+    nous changeons la couleur d’arrière-plan.
+*/
+form input[type="text"]:focus,
+form input[type="text"]:hover,
+form input[type="password"]:focus,
+form input[type="password"]:hover {
+    background-color: #ccc;
+}
+
+/*
+    Mises-en forme du bouton pour l’envoi du formulaire.
+*/
+form button[type="submit"] {
+    font-weight: bold;
+    color: #eee;
+    text-transform: uppercase;
+}
+
+/*
+    Mises-en forme du bouton pour l’envoi du formulaire au survol et au focus.
+*/
+
+
+
+
+
+
+/****************************************************/
+
+
+
+
+
+
+
+/* Styles de base pour la page Web
+   Ne pas touchez */
+
+
+/*------------------
+   Reset
+------------------*/
+
+html{
+    box-sizing: border-box;
+}
+
+*,*:before,*:after{
+    box-sizing: inherit;
+}
+
+/*------------------
+   Base
+------------------*/
+
+body{
+    background-color: white;
+    font-family: Helvetica, sans-serif;
+}
+
+
+/*------------------
+   Mise en page
+------------------*/
+
+.wrapper{
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* @import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+
+body{
+  font-family: 'Barlow', sans-serif;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+.border-left{
+  border-left: 2px solid var(--primary) !important;
+}
+
+
+.sidebar{
+  top: 0;
+  left : 0;
+  z-index : 100;
+  overflow-y: auto;
+}
+
+.overlay{
+  background-color: rgb(0 0 0 / 45%);
+  z-index: 99;
+}
+
+/* sidebar for small screens */
+@media screen and (max-width: 767px){
+  
+    .sidebar{
+      max-width: 18rem;
+      transform : translateX(-100%);
+      transition : transform 0.4s ease-out;
+    }
+    
+    .sidebar.active{
+      transform : translateX(0);
+    }
+    
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+
+body{
+  font-family: 'Barlow', sans-serif;
+  
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+.border-left{
+  border-left: 2px solid var(--primary) !important;
+}
+
+
+.sidebar{
+  top: 0;
+  left : 0;
+  z-index : 100;
+  overflow-y: auto;
+}
+
+.overlay{
+  background-color: rgb(0 0 0 / 45%);
+  z-index: 99;
+}
+
+/* sidebar for small screens */
+@media screen and (max-width: 767px){
+  
+  .sidebar{
+    max-width: 18rem;
+    transform : translateX(-100%);
+    transition : transform 0.4s ease-out;
+  }
+  
+  .sidebar.active{
+    transform : translateX(0);
+  }
+  
+}
+
+/* espace header  */
+
+.header{
+  color: #eee;
+}
+
+header {
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+h1 {
+  color: #333;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #525050;
+}
+
+
+footer{
+  background-color: #f2f2f2;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+
+:root {
+  --font: "Lato", sans-serif;
+  --corPreto: #000;
+  --corCinza: #3a3a3a;
+  --corCinzaClaro: #8f8f8f;
+  --corCiano: #07949e;
+  --corBranco: #fff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font);
+  justify-content: center;
+}
+.title {
+  position: absolute;
+  color: var(--corCiano);
+  top: 45px;
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: 700;
+}
+.box {
+  position: relative;
+  width: 380px;
+  height: 420px;
+  background-color: var(--corCinza);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.box::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 350px;
+  height: 420px;
+  background: linear-gradient(
+    0deg,
+    transparent,
+    var(--corCiano),
+    var(--corCiano)
+  );
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+}
+.box::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 280px;
+  height: 320px;
+  background: linear-gradient(
+    0deg,
+    transparent,
+    var(--corCiano),
+    var(--corCiano)
+  );
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  animation-delay: -3s;
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.form {
+  position: absolute;
+  inset: 2px;
+  border-radius: 8px;
+  background-color: var(--corCinza);
+  z-index: 10;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+}
+.form h2 {
+  color: var(--corCiano);
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+.inputBox {
+  position: relative;
+  width: 300px;
+  margin-top: 25px;
+}
+.inputBox input {
+  position: relative;
+  width: 100%;
+  padding: 20px 10px 10px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  color: var(--corCinzaClaro);
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  z-index: 10;
+}
+.inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 20px 0px 10px;
+  font-size: 1em;
+  color: var(--corCinzaClaro);
+  pointer-events: none;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+}
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span {
+  color: var(--corCiano);
+  transform: translateY(-34px);
+  font-size: 0.75em;
+}
+.inputBox i {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--corCiano);
+  border-radius: 4px;
+  transition: 0.5s;
+  pointer-events: none;
+  z-index: 9;
+}
+.inputBox input:valid ~ i,
+.inputBox input:focus ~ i {
+  height: 34px;
+}
+.links {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+.links a {
+  font-size: 0.8em;
+  color: var(--corCinzaClaro);
+  text-decoration: none;
+}
+.links a:hover,
+.links a:nth-child(2) {
+  color: var(--corCiano);
+}
+.form .bottom {
+  border: none;
+  outline: none;
+  background-color: var(--corCiano);
+  padding: 9px 0;
+  width: 140px;
+  margin-top: 10px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 1.2em;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  align-self: center;
+}
+.form .bottom:active {
+  opacity: 0.8;
+}
+.footer {
+  bottom: 0;
+  padding-top: 10px;
+  position: fixed;
+  width: 90%;
+  height: 50px;
+  color: var(--corBranco);
+  font-size: 1.1em;
+  text-align: center;
+  font-weight: normal;
+  line-height: 1em;
+}
+.footer a {
+  text-decoration: none;
+  color: var(--corCinzaClaro);
+  font-weight: 700;
+  font-size: 0.9em;
+}
+.footer a:hover {
+  color: var(--corCiano);
+}
+
+@media (max-height: 300px) {
+  body {
+    flex-direction: row;
+  }
+}
+
+.d{
+  color:#ccc;
+}
+input{
+  height: 10px;
+}
+button{
+  background-color: rgb(89, 40, 167);
+}
+.d{
+  width: 10px;
+  height: 45px;
+}
+.dd{
+  width: 80px;
+  height: 45px;
+  
+  margin-right: 20%;
+
+
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.navbar {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 10px 0;
+}
+
+.navbar nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.navbar nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.navbar nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.navbar nav ul li a:hover {
+  background-color: #0056b3;
+}
+
+.footer {
+  background-color: #f0f0f0;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* styles.css */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+
+
+main {
+  padding: 2rem;
+}
+
+.hero-section {
+  text-align: center;
+  background-color: #ecf5fb;
+  padding: 3rem 0;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.welcome-heading {
+  font-size: 3rem;
+  color: #4085fb;
+}
+
+.esi-text {
+  color: #f20b22;
+}
+
+.esi-logo {
+  width: 200px;
+  height: auto;
+  margin-top: 2rem;
+}
+
+.form-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 200px);
+}
+
+.form-container {
+  width: 400px;
+  padding: 2rem;
+  border: 1px solid #707070;
+  border-radius: 10px;
+}
+
+.form-heading {
+  font-size: 2rem;
+  color: #f20b22;
+  margin-bottom: 1rem;
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #f20b22;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #d0d0d0;
+  border-radius: 5px;
+}
+
+.login-form button {
+  background-color: #2ed7d0;
+  color: #ecf5fb;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+  background-color: #1febe4;
+}
+
+  
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  overflow-y:auto ;
+  overflow-x: hidden;
+  width: 100%;
+}
+body {
+background: linear-gradienT(45deg, hwb(150 9% 45%), #fa0a0a);
+
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+font-family: 'Montserrat', sans-serif;
+height: 100vh;
+margin: -20px 0 50px;
+}
+h1 {
+font-weight: bold;
+margin: 0;
+}
+
+button {
+
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #03e9f4,
+              0 0 100px #03e9f4;
+              background: #4CAF50;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer; 
+}
+button:hover,.form button:active,.form button:focus {
+  background: #43A047;
+}
+
+
+h2{
+  color: red;
+  padding: 20px;
+  font-size:30px;
+}
+form {
+background-color:#e8f5f8;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+padding: 0 50px;
+height:106%;
+text-align: center;
+border-radius: 1.5rem;
+}
+
+input {
+background-color: #eee;
+border: none;
+padding: 12px 15px;
+margin: 8px 0;
+width: 100%;
+}
+
+.container {
+background-color: #fff;
+border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+    0 10px 10px rgba(0,0,0,0.22);
+position: relative;
+overflow: hidden;
+width: 768px;
+max-width: 100%;
+min-height: 480px;
+}
+
+.form-container {
+position: absolute;
+top: 0;
+height: 100%;
+transition: all 0.6s ease-in-out;
+}
+
+.signe {
+left: 0;
+width: 50%;
+z-index: 2;
+}
+
+
+.overlay-container {
+position: absolute;
+top: 0;
+left: 50%;
+width: 50%;
+height: 100%;
+overflow: hidden;
+transition: transform 0.6s ease-in-out;
+z-index: 100;
+}
+.overlay {
+background: #414eff;
+background: -webkit-linear-gradient(to right,#02332f #35EEDF);
+background: linear-gradient(to right,#35EEDF,#02332f);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: 0 0;
+color: #FFFFFF;
+position: relative;
+left: -100%;
+height: 100%;
+width: 200%;
+  transform: translateX(0);
+transition: transform 0.6s ease-in-out;
+}
+
+.panel {
+position: absolute;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+padding: 0 40px;
+text-align: center;
+top: 0;
+height: 100%;
+width: 50%;
+transform: translateX(0);
+transition: transform 0.6s ease-in-out;
+}
+
+.overlay-right {
+right: 0;
+transform: translateX(0);
+}
+footer {
+  background-color: #222;
+  color: #fff;
+  font-size: 14px;
+  bottom: 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 999;
+}
+
+footer p {
+  margin: 10px 0;
+}
+
+footer a {
+  color: #3c97bf;
+  text-decoration: none;
+}
+/* inscription */
+
+main {
+  color: #FFF;
+  width: 300px;
+  height: 450px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: 25% 50%;
+  transform-style: preserve-3d;
+  transition: all 1s ease-in-out;
+  
+  &.flip {
+    transform: translate(0, -50%) rotateY(180deg);
+  }
+}
+
+hgroup {
+  width:8cm;
+ position:relative;
+ top:-50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+background: linear-gradienT(45deg, hwb(150 9% 45%), #fa0a0a);
+  border: 1px solid #FFF;
+border: none;
+  box-shadow: 6px 6px 20px rgba(173, 173, 173, 0.3);
+border-radius: 1.5rem;
+}
+.images{
+z-index:4;
+}
+h2 {
+font-weight: 300;
+line-height: 40px;
+color: #afac05;
+font-family: upercase;
+}
+.forme{
+   background: linear-gradienT(45deg, #0dcf5e, hwb(132 0% 94% / 0.87)); 
+ height:20cm;
+
+}
+.formi{
+font-size: 20px;
+font-family: upercase;
+}
+.inpute{
+border-radius: 2.5rem;
+height:0.8cm;
+}
+.but{
+color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #03e9f4,
+              0 0 100px #03e9f4;
+      background: linear-gradienT(45deg, hwb(0 1% 83%), #fa0a0a);   
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer; 
+}
+.but:hover {
+background: linear-gradienT(45deg, hwb(0 0% 87%), #012e23);
+}
+/* carte */
+.carte{
+width:10cm;
+height:11cm;
+background-color: black;
+}
+.glass{
+  min-height: 80vh;
+  width:10cm;
+top: +40px;
+position: relative;
+left:7%;
+  background: linear-gradienT( hwb(20 93% 5% / 0.329),rgba(243, 243, 243, 0.3));
+  z-index: 2;
+  border-radius: 2rem;
+  backdrop-filter:blur(2.5rem);
+  display: flex;
+}
+.diva{
+border: 1px solid white;
+width:24rem;
+position: relative;
+top:-4px;
+background: linear-gradienT(45deg, hwb(239 2% 10%), #0a42fa);   
+height: 1cm;
+border-radius: 2rem;
+backdrop-filter:blur(2.5rem);
+display: flex;
+border: none;
+
+}
+.imag{
+position: relative;
+top:160px;
+right: 70%;
+}
+.pa{
+font-weight: 600;
+font-family: upercase;
+font-size: 30px;
+top: -5px;
+padding-left: 10%;
+color: white;
+left:16% !important;
+}
+.section{
+padding: 60px;
+margin-left: 40%;
+}
